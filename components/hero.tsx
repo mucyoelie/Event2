@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Hero() {
@@ -32,6 +32,8 @@ export function Hero() {
           We transform ordinary gatherings into extraordinary, memorable events.
           From concept to execution, every detail reflects your vision.
         </p>
+
+        {/* Buttons */}
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Button
             asChild
@@ -43,6 +45,7 @@ export function Hero() {
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
+
           <Button
             asChild
             size="lg"
@@ -51,13 +54,31 @@ export function Hero() {
           >
             <Link href="/gallery">View Our Work</Link>
           </Button>
+
+          {/* ✅ WhatsApp Button (ONLY addition) */}
+          <Button
+            asChild
+            size="lg"
+            className="bg-green-500 text-white hover:bg-green-600 rounded-full px-8 text-base flex items-center gap-2"
+          >
+            <a
+              href="https://wa.me/254700000000?text=Hello%20Viable%20Events,%20I%20want%20to%20plan%20an%20event."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp Us
+              <MessageCircle className="h-5 w-5" />
+            </a>
+          </Button>
         </div>
       </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
         <div className="flex flex-col items-center gap-2">
-          <span className="text-xs uppercase tracking-widest text-secondary/60">Scroll</span>
+          <span className="text-xs uppercase tracking-widest text-secondary/60">
+            Scroll
+          </span>
           <div className="h-12 w-px bg-secondary/30" />
         </div>
       </div>
