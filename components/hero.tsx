@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArrowRight, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
